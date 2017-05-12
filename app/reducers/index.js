@@ -24,7 +24,8 @@ const rootReducer = combineReducers({
   isBookReturned: returnBookReducer,
   isBookBorrowed: borrowBookReducer,
   ratings: rateBookReducer,
-  session: sessionReducer
+  session: sessionReducer,
+  notifications
 })
 
 export default rootReducer

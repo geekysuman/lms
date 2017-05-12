@@ -135,12 +135,12 @@ contract LMS is Killable {
             reviewersCount: 0,
             totalRating: 0
         });
-        if (this.balance < 10**12) {
-            throw;
-        }
-        if(!catalog[numBooks].owner.send(10**12)) {
-            throw;
-        }
+ //       if (this.balance < 10**12) {
+ //           throw;
+ //       }
+ //       if(!catalog[numBooks].owner.send(10**12)) {
+ //           throw;
+//      }
     }
 
     function getBook(uint i) constant returns (string bookString) {

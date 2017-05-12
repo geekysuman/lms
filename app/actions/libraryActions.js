@@ -73,6 +73,7 @@ export const getMyBooks = () => {
 
 export const addBook = (book) => {
   return (dispatch) => {
+    console.log('add book is called...')
     dispatch(action(actionType.GET_ADD_BOOKS_LOADING, true))
     LMS.at(contractConfig.id).then((instance) => {
       return instance.addBook(
@@ -91,6 +92,7 @@ export const addBook = (book) => {
       dispatch(action(actionType.GET_ADD_BOOKS_SUCCESS, book))
       dispatch(action(actionType.GET_ADD_BOOKS_LOADING, false))
     }).catch((e) => {
+      console.log(e)
       dispatch(action(actionType.GET_ADD_BOOKS_ERROR, e))
       dispatch(action(actionType.GET_ADD_BOOKS_LOADING, false))
     })
