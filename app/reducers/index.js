@@ -13,6 +13,7 @@ import {
   rateBookReducer
 } from './libraryReducer'
 import { sessionReducer } from 'redux-react-session'
+import {reducer as notifications} from 'react-notification-system-redux';
 
 const rootReducer = combineReducers({
   accounts: libraryReducer,

@@ -5,6 +5,7 @@ import * as libraryActions from '../actions/libraryActions'
 import Book from './Book'
 import BooksForm from './BooksForm'
 import Loader from './Loader'
+import NotifyTest from './notifications/NotifyTest'
 
 const modalStyle = {
   content : {
@@ -22,7 +23,8 @@ const mapStateToProps = (state, ownProps) => {
     allBooks: state.books.allBooks,
     ownerDetails: state.session.user,
     loading: state.loading,
-    session: state.session
+    session: state.session,
+    error: state.error
   }
 }
 
@@ -63,6 +65,7 @@ export class Dashboard extends React.Component {
     const borrowedBooks = this.props.allBooks.filter((book) => book.borrower === this.props.ownerDetails.account)
     return (
       <div>
+        <NotifyTest message={this.props.error}/>
         <div className='add-btn'>
           <button className='btn btn-default' onClick={() => this.toggleModal('addBook')}>Add Book</button>
           <Modal
