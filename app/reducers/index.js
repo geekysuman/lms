@@ -17,7 +17,8 @@ const rootReducer = combineReducers({
   error: errorReducer,
   books: allBooksReducers,
   myBooks: myBooksReducers,
-  session: sessionReducer
+  session: sessionReducer,
+  notifications
 })
 
 export default rootReducer
