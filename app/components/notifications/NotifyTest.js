@@ -18,7 +18,7 @@ class NotifyTest extends React.Component {
         }
     }
     dispatchNotification(fn, timeout, nextProps) {
-        const { title, text } = nextProps.message.error;
+        const { title, text } = nextProps.message.message;
         const notificationOpts = {
             // uid: 'once-please', // you can specify your own uid if required 
             title: title,
