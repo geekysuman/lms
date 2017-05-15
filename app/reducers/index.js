@@ -6,11 +6,7 @@ import {
   loadingReducer,
   errorReducer,
   allBooksReducers,
-  myBooksReducers,
-  addBookReducer,
-  returnBookReducer,
-  borrowBookReducer,
-  rateBookReducer
+  myBooksReducers
 } from './libraryReducer'
 import { sessionReducer } from 'redux-react-session'
 import {reducer as notifications} from 'react-notification-system-redux';
@@ -21,12 +17,7 @@ const rootReducer = combineReducers({
   error: errorReducer,
   books: allBooksReducers,
   myBooks: myBooksReducers,
-  isBookAdded: addBookReducer,
-  isBookReturned: returnBookReducer,
-  isBookBorrowed: borrowBookReducer,
-  ratings: rateBookReducer,
-  session: sessionReducer,
-  notifications
+  session: sessionReducer
 })
 
 export default rootReducer
