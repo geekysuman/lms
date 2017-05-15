@@ -8,7 +8,7 @@ import SearchBook from './SearchBook'
 import Modal from 'react-modal'
 import LMSAuth from './LMSAuth'
 import Loader from './Loader'
-import NotifyTest from './notifications/NotifyTest'
+import NotifyMe from './notifications/NotifyMe'
 
 const style = {
   marginTop : '15px'
@@ -108,7 +108,7 @@ export class BooksPage extends React.Component {
         {
           this.renderLoader()
         }
-        <NotifyTest message={this.props.error}/>
+        <NotifyMe message={this.props.error}/>
         <div className='container'>
           <div className='row'>
             <div className='col-md-7'>

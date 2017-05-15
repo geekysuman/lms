@@ -9,3 +9,4 @@ npm-debug.log
 yarn-error.log
 pnet/
 privatenet/
+app/config.js

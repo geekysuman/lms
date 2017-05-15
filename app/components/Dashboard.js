@@ -5,7 +5,7 @@ import * as libraryActions from '../actions/libraryActions'
 import Book from './Book'
 import BooksForm from './BooksForm'
 import Loader from './Loader'
-import NotifyTest from './notifications/NotifyTest'
+import NotifyMe from './notifications/NotifyMe'
 
 const modalStyle = {
   content : {
@@ -70,7 +70,7 @@ export class Dashboard extends React.Component {
     const borrowedBooks = this.props.allBooks.filter((book) => book.borrower === this.props.ownerDetails.account)
     return (
       <div>
-        <NotifyTest message={this.props.error}/>
+        <NotifyMe message={this.props.error}/>
         <div className='add-btn'>
           <button className='btn btn-default' onClick={() => this.toggleModal('addBook')}>Add Book</button>
           <Modal
