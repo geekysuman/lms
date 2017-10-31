@@ -30,7 +30,8 @@ const UserAuthRoute = (app, passport) => {
                 'profile',
                 'email'
             ],
-            prompt : 'select_account'
+            prompt : 'select_account',
+            hd:'imaginea.com'
         }
         ));
 

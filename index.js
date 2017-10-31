@@ -14,6 +14,7 @@ import routes from './server/routes/index.route';
 import passportStrategy from './server/helpers/passport.strategy';
 import UserAuthRoute from './server/routes/user.auth.route';
 import handleSocket from './server/helpers/handle.socket'
+import logToFile from './server/helpers/logger.helper'
 
 // Attach socket with server
 var server = createServer(app); 
@@ -52,6 +53,9 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
+
+// Log the api access to log file
+app.use(logToFile)
 
 UserAuthRoute(app, passport); // Set up the passport authentication
 

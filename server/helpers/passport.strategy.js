@@ -23,6 +23,13 @@ const passportStrategy = (passport) => {
         },
         function(request, accessToken, refreshToken, profile, done) {
             AuthCtrl.findOrCreateUser(profile, done);
+            /* if(profile._json.domain === "imaginea.com"){
+                AuthCtrl.findOrCreateUser(profile, done);
+                // User.find({ id: profile.id }).done(done);
+            }else{
+                // fail        
+                done(new Error("Invalid host domain"));
+            } */
         }
     ));
 }
